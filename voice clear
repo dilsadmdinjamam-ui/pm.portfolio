@@ -1,0 +1,269 @@
+type UserProfile = {
+  age?: number;
+  heightCm?: number;
+  weightKg?: number;
+  goal?: "weight_gain" | "weight_loss" | "muscle_gain" | "fitness";
+  activityLevel?: string;
+  dietaryRestrictions?: string[];
+};
+
+const SAFETY_KEYWORDS = [
+  "chest pain",
+  "severe dizziness",
+  "fainting",
+  "difficulty breathing",
+  "blood",
+  "severe pain"
+];
+
+function containsSafetyRisk(message: string) {
+  const text = message.toLowerCase();
+  return SAFETY_KEYWORDS.some(keyword => text.includes(keyword));
+}
+
+function buildFitnessPrompt(
+  userMessage: string,
+  profile: UserProfile
+) {
+  if (containsSafetyRisk(userMessage)) {
+    return `
+You are a safety-first fitness assistant.
+
+The user may be describing a potentially serious symptom.
+
+Do NOT diagnose the user.
+Do NOT recommend continuing exercise.
+Do NOT provide an aggressive workout or diet plan.
+
+Tell the user to stop the activity and seek appropriate medical attention,
+especially if symptoms are severe, sudden, persistent, or worsening.
+
+User message:
+${userMessage}
+`;
+  }
+
+  return `
+You are a practical AI fitness coach.
+
+Rules:
+1. Never give dangerous crash diets.
+2. Never promise a specific amount of weight loss in a specific short period.
+3. Do not recommend extreme calorie restriction.
+4. Consider the user's age, height, weight and goal when available.
+5. Respect dietary restrictions and budget.
+6. Give realistic food alternatives.
+7. Encourage strength training for muscle gain.
+8. Encourage adequate recovery and sleep.
+9. Do not diagnose medical conditions.
+10. If important information is missing, ask for it instead of inventing it.
+11. Keep recommendations practical and easy to follow.
+
+User profile:
+${JSON.stringify(profile)}
+
+User question:
+${userMessage}
+`;
+}type UserProfile = {
+  age?: number;
+  heightCm?: number;
+  weightKg?: number;
+  goal?: "weight_gain" | "weight_loss" | "muscle_gain" | "fitness";
+  activityLevel?: string;
+  dietaryRestrictions?: string[];
+};
+
+const SAFETY_KEYWORDS = [
+  "chest pain",
+  "severe dizziness",
+  "fainting",
+  "difficulty breathing",
+  "blood",
+  "severe pain"
+];
+
+function containsSafetyRisk(message: string) {
+  const text = message.toLowerCase();
+  return SAFETY_KEYWORDS.some(keyword => text.includes(keyword));
+}
+
+function buildFitnessPrompt(
+  userMessage: string,
+  profile: UserProfile
+) {
+  if (containsSafetyRisk(userMessage)) {
+    return `
+You are a safety-first fitness assistant.
+
+The user may be describing a potentially serious symptom.
+
+Do NOT diagnose the user.
+Do NOT recommend continuing exercise.
+Do NOT provide an aggressive workout or diet plan.
+
+Tell the user to stop the activity and seek appropriate medical attention,
+especially if symptoms are severe, sudden, persistent, or worsening.
+
+User message:
+${userMessage}
+`;
+  }
+
+  return `
+You are a practical AI fitness coach.
+
+Rules:
+1. Never give dangerous crash diets.
+2. Never promise a specific amount of weight loss in a specific short period.
+3. Do not recommend extreme calorie restriction.
+4. Consider the user's age, height, weight and goal when available.
+5. Respect dietary restrictions and budget.
+6. Give realistic food alternatives.
+7. Encourage strength training for muscle gain.
+8. Encourage adequate recovery and sleep.
+9. Do not diagnose medical conditions.
+10. If important information is missing, ask for it instead of inventing it.
+11. Keep recommendations practical and easy to follow.
+
+User profile:
+${JSON.stringify(profile)}
+
+User question:
+${userMessage}
+`;
+}type UserProfile = {
+  age?: number;
+  heightCm?: number;
+  weightKg?: number;
+  goal?: "weight_gain" | "weight_loss" | "muscle_gain" | "fitness";
+  activityLevel?: string;
+  dietaryRestrictions?: string[];
+};
+
+const SAFETY_KEYWORDS = [
+  "chest pain",
+  "severe dizziness",
+  "fainting",
+  "difficulty breathing",
+  "blood",
+  "severe pain"
+];
+
+function containsSafetyRisk(message: string) {
+  const text = message.toLowerCase();
+  return SAFETY_KEYWORDS.some(keyword => text.includes(keyword));
+}
+
+function buildFitnessPrompt(
+  userMessage: string,
+  profile: UserProfile
+) {
+  if (containsSafetyRisk(userMessage)) {
+    return `
+You are a safety-first fitness assistant.
+
+The user may be describing a potentially serious symptom.
+
+Do NOT diagnose the user.
+Do NOT recommend continuing exercise.
+Do NOT provide an aggressive workout or diet plan.
+
+Tell the user to stop the activity and seek appropriate medical attention,
+especially if symptoms are severe, sudden, persistent, or worsening.
+
+User message:
+${userMessage}
+`;
+  }
+
+  return `
+You are a practical AI fitness coach.
+
+Rules:
+1. Never give dangerous crash diets.
+2. Never promise a specific amount of weight loss in a specific short period.
+3. Do not recommend extreme calorie restriction.
+4. Consider the user's age, height, weight and goal when available.
+5. Respect dietary restrictions and budget.
+6. Give realistic food alternatives.
+7. Encourage strength training for muscle gain.
+8. Encourage adequate recovery and sleep.
+9. Do not diagnose medical conditions.
+10. If important information is missing, ask for it instead of inventing it.
+11. Keep recommendations practical and easy to follow.
+
+User profile:
+${JSON.stringify(profile)}
+
+User question:
+${userMessage}
+`;
+}type UserProfile = {
+  age?: number;
+  heightCm?: number;
+  weightKg?: number;
+  goal?: "weight_gain" | "weight_loss" | "muscle_gain" | "fitness";
+  activityLevel?: string;
+  dietaryRestrictions?: string[];
+};
+
+const SAFETY_KEYWORDS = [
+  "chest pain",
+  "severe dizziness",
+  "fainting",
+  "difficulty breathing",
+  "blood",
+  "severe pain"
+];
+
+function containsSafetyRisk(message: string) {
+  const text = message.toLowerCase();
+  return SAFETY_KEYWORDS.some(keyword => text.includes(keyword));
+}
+
+function buildFitnessPrompt(
+  userMessage: string,
+  profile: UserProfile
+) {
+  if (containsSafetyRisk(userMessage)) {
+    return `
+You are a safety-first fitness assistant.
+
+The user may be describing a potentially serious symptom.
+
+Do NOT diagnose the user.
+Do NOT recommend continuing exercise.
+Do NOT provide an aggressive workout or diet plan.
+
+Tell the user to stop the activity and seek appropriate medical attention,
+especially if symptoms are severe, sudden, persistent, or worsening.
+
+User message:
+${userMessage}
+`;
+  }
+
+  return `
+You are a practical AI fitness coach.
+
+Rules:
+1. Never give dangerous crash diets.
+2. Never promise a specific amount of weight loss in a specific short period.
+3. Do not recommend extreme calorie restriction.
+4. Consider the user's age, height, weight and goal when available.
+5. Respect dietary restrictions and budget.
+6. Give realistic food alternatives.
+7. Encourage strength training for muscle gain.
+8. Encourage adequate recovery and sleep.
+9. Do not diagnose medical conditions.
+10. If important information is missing, ask for it instead of inventing it.
+11. Keep recommendations practical and easy to follow.
+
+User profile:
+${JSON.stringify(profile)}
+
+User question:
+${userMessage}
+`;
+}
